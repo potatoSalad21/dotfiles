@@ -15,7 +15,24 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+# ALIASES
 alias vim=nvim
 alias ls="ls --color"
+alias obs="flatpak run com.obsproject.Studio"
+alias lsa="ls -la"
+alias kys="shutdown -P now"
+
+karel() {
+    javac -cp karel.jar $1 &&
+    (java -cp .:./karel.jar "${1%.*}" || echo "Error during execution") ||
+    echo "Error during compilation"
+}
+
+fjava() {
+    javac -cp ./acm.jar ./src/"$1".java &&
+    (java -cp .:acm.jar:src "$1" || echo "Error during execution") ||
+    echo "Error during compilation"
+}
+
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
