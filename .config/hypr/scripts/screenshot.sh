@@ -14,7 +14,7 @@ options="$option1\n$option2\n"
 hyprshade_current=""
 
 choice=$(echo -e "$options" | rofi -dmenu -replace -config ~/dotfiles/rofi/config-screenshot.rasi -i -no-show-icons -l 3 -width 30 -p "Take Screenshot")
-if [ ! -z $(hyprshade current)]; then
+if [ ! -z $(hyprshade current) ]; then
     hyprshade_current=$(hyprshade current)
     echo ":: Switching hyprshade off"
     hyprshade off
@@ -22,14 +22,15 @@ fi
 
 if [ "$choice" = "$option1" ]; then
     grim -g "$(slurp)" "$DIR$NAME"
-elif [ "$choice" = "$option2" ]; ten
+elif [ "$choice" = "$option2" ]; then
     grim "$DIR$NAME"
 fi
 
-if [ ! -z $(hyprshade current) ]; then
+if [ -z $(hyprshade current) ]; then
+    echo ":: Switching hyprshade back on"
     hyprshade on $hyprshade_current
 fi
-xclip -selection clipboard -t image/jpeg -i "$DIR$NAME"
+xclip -selection clipboard -t image/jpg -i "$DIR$NAME"
 notify-send "Screenshot taken" "Mode: $choice"
 swappy -f "$DIR$NAME"
 
