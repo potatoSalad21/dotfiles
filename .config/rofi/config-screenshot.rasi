@@ -20,7 +20,7 @@ configuration {
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 /* ---- Load wallpaper ---- */
-@import "~/.cache/current_wallpaper.rasi"
+//@import "~/.cache/current_wallpaper.rasi"
 
 /* ---- Window ---- */
 window {
