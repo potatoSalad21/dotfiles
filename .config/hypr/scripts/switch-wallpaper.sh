@@ -9,13 +9,4 @@ if [ $PROCESS_COUNT -eq 0 ]; then
     swww-daemon &
 fi
 
-DIR="~/Pictures/wallpapers/"
-wallpapers=()
-
-for file in "$DIR"/*
-do
-    wallpapers += file
-done
-
-
-
+swww img $1 && wal -i $1

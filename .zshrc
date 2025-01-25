@@ -118,3 +118,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . "/home/dato/.deno/env"
+
+export PATH=$PATH:/home/dato/.spicetify
