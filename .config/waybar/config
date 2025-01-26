@@ -34,8 +34,8 @@
         "tooltip": false
     },
     "network": {
-        "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format": "{ipaddr}/{cidr} {icon}",
+        "format-alt": "{icon}",
         "format-alt-click": "click-right",
         "format-icons": {
             "wifi": ["", "" ,""],
