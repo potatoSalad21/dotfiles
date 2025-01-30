@@ -34,7 +34,7 @@
         "tooltip": false
     },
     "network": {
-        "format": "{ipaddr}/{cidr} {icon}",
+        "format": "Leaked IP lmao: {ipaddr}/{cidr} {icon}",
         "format-alt": "{icon}",
         "format-alt-click": "click-right",
         "format-icons": {
