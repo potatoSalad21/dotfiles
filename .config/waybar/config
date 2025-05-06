@@ -25,7 +25,7 @@
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -40,7 +40,7 @@
         "format-icons": {
             "wifi": ["", "" ,""],
             "ethernet": [""],
-            "disconnected": [""]
+            "disconnected": [""]
         },
         "on-click": "termite -e nmtui",
     "tooltip": false
@@ -51,11 +51,10 @@
         "format-alt-click": "click-right",
         "format-muted": "",
         "format-icons": {
-            "phone": [" ", " ", " ", " "],
-            "default": ["", "", "", ""]
+            "phone": [" ", " ", " "],
+            "default": ["", "", ""]
         },
-        "scroll-step": 10,
-        "on-click": "pavucontrol",
+        "scroll-step": 10, "on-click": "pavucontrol",
         "tooltip": false
     },
     "custom/spotify": {
