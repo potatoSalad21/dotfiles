@@ -12,9 +12,12 @@ return {
             vim.g.vimtex_view_method = "zathura"
         end
     },
+    "tpope/vim-commentary",
 	"tpope/vim-fugitive",
-    "andweeb/presence.nvim",
+    --"andweeb/presence.nvim",
+    "vyfor/cord.nvim",
     "m4xshen/autoclose.nvim",
+
 	"eandrju/cellular-automaton.nvim",
     "ThePrimeagen/vim-be-good",
 }

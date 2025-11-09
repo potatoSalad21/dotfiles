@@ -17,7 +17,6 @@ return {
                 enable = true,
                 additional_vim_regex_highlighting = { "markdown" },
             },
-
         })
 
         local treesitter_parser_config = require("nvim-treesitter.parsers").get_parser_configs()
