@@ -1,16 +1,16 @@
 * {
-    border:        none;
-    border-radius: 0;
     font-family:   Sans;
     font-size:     15px;
     box-shadow:    none;
-    text-shadow:   none;
+    text-shadow:   -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     transition-duration: 0s;
 }
 
 window {
     color:      rgba(217, 216, 216, 1);
     background: rgba(35, 31, 32, 0.00);
+
+    background-color: rgba(40, 39, 43, 0.7);
 }
 
 window#waybar.solo {

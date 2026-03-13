@@ -1,7 +1,7 @@
 {
-    "layer": "bottom",
-    "position": "bottom",
-    "height": 10,
+    "layer": "top",
+    "position": "top",
+    "height": 32,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["sway/window"],
@@ -34,8 +34,8 @@
         "tooltip": false
     },
     "network": {
-        "format": "Leaked IP lmao: {ipaddr}/{cidr} {icon}",
-        "format-alt": "{icon}",
+        "format": "{icon}",
+        "format-alt": "Leaked IP lmao: {ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
         "format-icons": {
             "wifi": ["", "" ,""],
