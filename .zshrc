@@ -4,26 +4,11 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
-export PATH="$JAVA_HOME/bin:$PATH"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# ALIASES
-alias vim=nvim
-alias ls="ls --color"
-alias obs="flatpak run com.obsproject.Studio"
-alias lsa="ls -la"
-alias kys="shutdown -P now"
-
-fjava() {
-    javac -cp ./acm.jar ./src/"$1".java &&
-    (java -cp .:acm.jar:src "$1" || echo "Error during execution") ||
-    echo "Error during compilation"
-}
+ZSH_THEME="gozilla"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -85,7 +70,9 @@ fjava() {
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+alias vim=nvim
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
+#
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -117,6 +105,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. "/home/dato/.deno/env"
 
-export PATH=$PATH:/home/dato/.spicetify
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/dato/.opam/opam-init/init.zsh' ]] || source '/home/dato/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
+# Created by `pipx` on 2026-02-01 14:22:29
+export PATH="$PATH:/home/dato/.local/bin"

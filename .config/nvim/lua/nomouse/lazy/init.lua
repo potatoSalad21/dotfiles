@@ -12,6 +12,11 @@ return {
             vim.g.vimtex_view_method = "zathura"
         end
     },
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^7', -- Recommended
+        lazy = false, -- This plugin is already lazy
+    },
     "tpope/vim-commentary",
 	"tpope/vim-fugitive",
     --"andweeb/presence.nvim",
