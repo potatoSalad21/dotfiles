@@ -73,6 +73,7 @@ ZSH_THEME="gozilla"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 alias vim=nvim
+alias ff=fastfetch
 
 source $ZSH/oh-my-zsh.sh
 

@@ -2,7 +2,7 @@
     font-family:   Sans;
     font-size:     15px;
     box-shadow:    none;
-    text-shadow:   -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow:   -1px 0 #211e1e, 0 1px #211e1e, 1px 0 #211e1e, 0 -1px #211e1e;
     transition-duration: 0s;
 }
 
@@ -32,7 +32,7 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    border-top: 3px solid rgba(217, 216, 216, 1);
+    border-top:    3px solid rgba(217, 216, 216, 1);
     border-bottom: 3px solid rgba(217, 216, 216, 0);
 }
 
@@ -40,13 +40,20 @@ window#waybar.solo {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
-    margin:     0px 6px 0px 10px;
+#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather {
+    margin:     0px 7px 0px 20px;
     min-width:  25px;
 }
 
+#tray {
+    margin-right: 7px;
+}
+
+#network {
+    margin-left: 5px;
+}
+
 #clock {
-    margin:     0px 16px 0px 10px;
     min-width:  140px;
 }
 
