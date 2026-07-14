@@ -30,7 +30,10 @@ if [ -z $(hyprshade current) ]; then
     echo ":: Switching hyprshade back on"
     hyprshade on $hyprshade_current
 fi
-xclip -selection clipboard -t image/jpg -i "$DIR$NAME"
-notify-send "Screenshot taken" "Mode: $choice"
-swappy -f "$DIR$NAME"
+
+if [ "$choice" != "" ]; then
+    xclip -selection clipboard -t image/jpg -i "$DIR$NAME"
+    notify-send "Screenshot taken" "Mode: $choice"
+    swappy -f "$DIR$NAME"
+fi
 
