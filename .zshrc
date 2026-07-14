@@ -118,3 +118,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2026-02-01 14:22:29
 export PATH="$PATH:/home/dato/.local/bin"
+
+# nim
+export PATH=/home/dato/.nimble/bin:$PATH
