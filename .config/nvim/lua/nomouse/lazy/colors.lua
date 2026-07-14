@@ -8,23 +8,18 @@ end
 
 return {
     {
-        "folke/tokyonight.nvim",
+        "ficcdaf/ashen.nvim",
+        lazy = false,
+        priority = 1000,
+        name = "ashen",
         config = function()
-            require("tokyonight").setup({
-                style = "storm",
-                transparent = true,
-                terminal_colors = true,
-                styles = {
-                    comments = { italic = false },
-                    keywords = { italic = false },
-
-                    sidebars = "dark",
-                    floats = "dark",
-                },
+            require("ashen").setup({
+                disable_background = true
             })
+            ColorMyPencils("ashen")
         end
     },
-
+--[[
     {
         "rose-pine/neovim",
         name = "rose-pine",
@@ -37,4 +32,5 @@ return {
             ColorMyPencils()
         end
     },
+    ]]
 }
