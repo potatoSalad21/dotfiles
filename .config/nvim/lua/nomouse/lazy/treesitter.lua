@@ -1,6 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    build = "TSUpdate",
+    branch = "master",
+    build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup({
             -- list of parser names

@@ -8,16 +8,9 @@ return {
         version = '^7', -- Recommended
         lazy = false, -- This plugin is already lazy
     },
-    {
-        "nvim-java/nvim-java",
-        config = function()
-            require("java").setup()
-            vim.lsp.enable("jdtls")
-        end,
-    },
     "tpope/vim-commentary",
-	"tpope/vim-fugitive",
-    "vyfor/cord.nvim",
+    "tpope/vim-fugitive",
+    "andweeb/presence.nvim",
     "m4xshen/autoclose.nvim",
 
     "ThePrimeagen/vim-be-good",
