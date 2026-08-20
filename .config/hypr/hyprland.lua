@@ -26,7 +26,7 @@ local mainMod     = "SUPER"
 ---- AUTOSTART ----
 -------------------
 
-hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function ()
   hl.exec_cmd(terminal)
   hl.exec_cmd("waybar")
   hl.exec_cmd("brave")
@@ -192,6 +192,9 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 --hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
+-- Screenshot bind
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/screenshots"))
+
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
@@ -277,4 +280,27 @@ hl.window_rule({
 
     move  = "20 monitor_h-120",
     float = true,
+})
+
+-- Assign windows to workspaces
+
+hl.window_rule({
+    match = {
+        class = "kitty"
+    },
+    workspace = "1"
+})
+
+hl.window_rule({
+    match = {
+        class = "brave"
+    },
+    workspace = "2"
+})
+
+hl.window_rule({
+    match = {
+        class = "discord"
+    },
+    workspace = "3"
 })
