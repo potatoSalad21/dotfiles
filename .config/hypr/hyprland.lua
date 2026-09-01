@@ -18,7 +18,7 @@ hl.monitor({
 
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu        = "rofi -show drun"
+local menu        = "wofi --show drun"
 local mainMod     = "SUPER"
 
 
@@ -30,6 +30,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd(terminal)
   hl.exec_cmd("waybar")
   hl.exec_cmd("brave")
+  hl.exec_cmd("sleep 0.5 && hyprpaper")
 end)
 
 
@@ -67,7 +68,7 @@ hl.config({
         rounding_power = 2,
 
         active_opacity   = 1,
-        inactive_opacity = 0.9,
+        inactive_opacity = 0.95,
 
         shadow = {
             enabled      = true,
@@ -78,8 +79,8 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 3,
-            passes    = 1,
+            size      = 5,
+            passes    = 2,
             vibrancy  = 0.1696,
         },
     },
@@ -139,8 +140,9 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper  = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo    = true, -- If true disables the random hyprland logo / anime girl background. :(
+        disable_splash_rendering = true,
     },
 })
 
