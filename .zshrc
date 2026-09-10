@@ -1,12 +1,5 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="gozilla"
 
@@ -72,14 +65,13 @@ ZSH_THEME="gozilla"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-alias vim=nvim
-alias ff=fastfetch
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export PATH="$PATH:/usr/local/openjdk-8/bin"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -93,7 +85,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
-#
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -106,18 +97,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/home/dato/.opam/opam-init/init.zsh' ]] || source '/home/dato/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
-
-# Created by `pipx` on 2026-02-01 14:22:29
-export PATH="$PATH:/home/dato/.local/bin"
-
-# nim
-export PATH=/home/dato/.nimble/bin:$PATH
