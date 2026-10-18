@@ -20,6 +20,7 @@ local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "wofi --show drun"
 local mainMod     = "SUPER"
+local browser     = "brave"
 
 
 -------------------
@@ -28,8 +29,9 @@ local mainMod     = "SUPER"
 
 hl.on("hyprland.start", function ()
   hl.exec_cmd(terminal)
+  hl.exec_cmd(browser)
+  hl.exec_cmd("protonvpn-app")
   hl.exec_cmd("waybar")
-  hl.exec_cmd("brave")
   hl.exec_cmd("sleep 0.5 && hyprpaper")
 end)
 
@@ -193,6 +195,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 --hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Screenshot bind
@@ -309,4 +312,11 @@ hl.window_rule({
         class = "discord"
     },
     workspace = "3"
+})
+
+hl.window_rule({
+    match = {
+        class = "proton.vpn.app.gtk"
+    },
+    workspace = "10"
 })
