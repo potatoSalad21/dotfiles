@@ -71,7 +71,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export PATH="$PATH:/usr/local/openjdk-8/bin"
+export PATH="/usr/local/jdk-27/bin:$PATH"
+alias java8="/usr/local/openjdk-8/bin/java"
+alias javac8="/usr/local/openjdk-8/bin/javac"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -97,3 +99,15 @@ export PATH="$PATH:/usr/local/openjdk-8/bin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/monke/.opam/opam-init/init.zsh' ]] || source '/home/monke/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null; true
+# END opam configuration
+
+# opencode
+export PATH=/home/monke/.opencode/bin:$PATH
