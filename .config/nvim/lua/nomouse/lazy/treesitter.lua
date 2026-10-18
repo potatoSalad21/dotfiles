@@ -23,7 +23,7 @@ return {
 
                 vim.treesitter.start(args.buf, lang)
 
-                if not vim.list_contains({ "c", "cpp" }, lang) then
+                if not vim.list_contains({ "c", "cpp", "ocaml" }, lang) then
                     vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
                 end
             end,

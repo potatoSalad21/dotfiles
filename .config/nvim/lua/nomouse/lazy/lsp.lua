@@ -11,6 +11,8 @@ return {
                 "denols",
                 "clangd",
                 "gopls",
+                "rust_analyzer",
+                "pyright",
             },
             handlers = {
                 function(server_name)
